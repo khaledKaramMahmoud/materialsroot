@@ -1,0 +1,22 @@
+:root {
+    --primaryColor: #3fd0d4;
+    --mainWhite: #fff;
+    --offWhite: #f7f7f7;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --darkGrey: #afafaf;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: "Lato", sans-serif; */
+    /* background: var(--offWhite); */
+    /* color: var(--mainBlack); */
+    font-size: 1rem;
+    line-height: 1.4;
+}
