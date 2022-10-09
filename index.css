@@ -6,8 +6,7 @@
     --mainWhite: #fff;
     --offWhite: #f8f9fc;
     --mainBlack: #1f1e1a;
-    --mainGrey: #ececec;
-    --darkGrey: #afafaf;
+    --gray: #e9ecef;
 }
 
 *{
@@ -15,22 +14,26 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+a{
+    color: unset !important;
+    text-decoration: none !important;
+}
 body {
     font-family: 'Tajawal', sans-serif !important;
     font-size: 1rem;
     line-height: 1.4;
+    background: var(--offWhite);
 }
 /* chat */
 .chat-page{
     background: var(--offWhite);
-    height: 100vh;  
+    /* height: 100vh;   */
     overflow: hidden;
 
 }
 .chat-page h1{
     text-align:center ;
-    color: var(--secondColor);
+    color: #2476fd;
 }
 #chat3 .form-control {
     border-color: transparent;
@@ -56,10 +59,18 @@ body {
         overflow-x: auto;
         overflow-y: auto;
     }
-.chat-container{
+/* .chat-container{
     margin: auto !important;
+} */
+/* .chat-div{
+    position: relative;
 }
-
+.write-msg{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+} */
 @media screen and (min-width: 769px) {
     .chat-container{
         position: relative;
@@ -67,5 +78,130 @@ body {
     }
 }
 /* login */
-
+/* navbar */
+@media screen and (min-width: 577px) {
+    .nav-cont{
+        display: flex;
+    }
+    .nav-cont>a{
+        justify-self: flex-start !important;
+    }
+    .nav-cont>.asd{
+        justify-self: flex-end !important;
+    }
+}
 /* home */
+nav{
+    display: flex;
+    background: var(--mainBlack);
+    color: var(--mainWhite);
+    height: 55px;
+    align-items: center;
+    padding:0 1rem;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav>:first-child{
+    display: flex;
+    gap: 2rem;
+}
+.nav>:first-child>h3>i{
+    margin-top: 7px;
+}
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.5),rgba(211, 169, 48, 0.5)), url("../bg.jpg") center/cover no-repeat fixed;
+    height: calc(100vh - 55px);
+    overflow: hidden;
+}
+  header>:first-child{
+    width: 90%;
+    margin: 0 auto;
+   }
+   .scroll-h {
+    width: max-content;
+    max-height: 400px !important;
+    min-height: 400px !important;
+    overflow-y: auto;
+}
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bd9d40;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8f7731; 
+  }
+  .side {
+    flex: 30%;
+    background-color: var(--gray);
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+  .main {
+    flex: 60%;
+  }
+  .main a{
+    background: #bd9d40 ;
+    color: var(--mainWhite);
+    transition: all .4s ease;
+    border: 2px solid #bd9d40 !important;
+    transition: all .8s ease;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .main a:hover{
+    background:  #bd9d40 !important;
+    color: var(--mainWhite);
+    transform: scale(1.03);
+  }
+    @media screen and (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+    .scroll-h {
+        max-height: 300px !important;
+        min-height: 300px !important;
+    }
+  }
+  /* professor */
+  .professor>:first-child{
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .professor>:last-child{
+    margin-top: 1.8rem;
+  }
+  .professor section{
+    display: flex;
+    align-items: center;
+  }
+  .professor section>i{
+    margin-top: -.8rem;
+    font-size: 25px;
+    color: var(--secondColor);
+    margin-left: 1rem;
+  }
+  .professor section>p{
+    font-size: 25px;
+    color: var(--mainBlack);
+    font-weight: 500;
+    margin-left: 1rem;
+  }
